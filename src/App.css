@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+.app{
+    background-color: rgb(42, 42, 42);
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header{
+    padding: 20px 0px;
+    
+    box-shadow: 0 0 20px rgb(35, 35, 35);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content{
+    padding: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.catalog{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.catalog-item{
+    position: relative;
+    width: 300px;
+    margin-bottom: 60px;
+    height: 420px;
+}
+
+.catalog-item-img{
+    width: 100%;
+    height: 420px;
+}
+
+.catalog-item-title{
+    font-size: 20px;
+    margin: 6px 0 12px;
+}
+
+.addToWishList{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.wishList {
+    position: fixed;
+    background-color: rgb(45,45,45);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 760px;
+    height: fit-content;
+    overflow: hidden;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    box-shadow: 0 0 600px 300px rgb(15, 15, 15);
+}
+
+.wishList-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(40,40,40);
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(22, 22, 22);
+}
+
+
+.wishList-scroll{
+    padding: 40px;
+    overflow-y: auto;
+    height: 700px;
+}
+
+.wishList-item{
+    margin: 0 auto 30px;
+    width: fit-content;
+}
+
+.wishList-item .catalog-item-img
+{
+    height: auto;
+    width: 300px;
+    box-shadow: 0 0 20px rgb(20, 20, 20);
+}
+
+@keyframes CatalogItemAnimation {
+    25%{
+        transform: rotate(2deg);
+    }
+    75%{
+        transform: rotate(-2deg);
+    }
 }
